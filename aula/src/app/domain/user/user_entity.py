@@ -21,3 +21,10 @@ class User:
     
     def collect_tasks(self, tasks: List[Task]) -> None:
         self.tasks.extend(tasks)
+
+    def count_pending_tasks(self):
+        count = 0
+        for task in self.tasks:
+            if task.completed == False:
+                count += 1
+        return count
