@@ -75,3 +75,11 @@ pytest
 - Certifique-se de ter o Docker instalado na sua máquina antes de rodar os comandos.
 - Para mais informações sobre o Docker, consulte os tutoriais disponibilizados para a aula.
 - Sinta-se à vontade para consultar o ambiente referencial sempre que tiver dúvidas durante a aula.
+
+
+
+Subir api comand: 
+
+```bash 
+uvicorn infra.api.main:app --reload
+```
