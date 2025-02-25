@@ -17,10 +17,11 @@ class Email(BaseModel):
 
 class Telefone(BaseModel):
     numero: str
+
     @validator('numero')
-    def validar_telefone(cls, value): 
-        if not re.match(r"ˆ\d{2}-\d{4,5}-\d{4}$", value):
-            raise ValueError("\nFormato de telefone inválido. \nO formato deve ser DDD-99999-9999")
+    def validar_telefone(cls, value):
+        if not re.match(r"^\d{2}-\d{4,5}-\d{4}$", value):
+           raise ValueError("\nFormato de telefone inválido. \nO formato deve ser DDD-99999-9999")
         return value
     
 
